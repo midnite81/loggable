@@ -123,7 +123,7 @@ abstract class BaseLogger
 
         $log = $class->getLogger();
 
-        return $log->{$name}($arguments);
+        return call_user_func_array([$log, $name], $arguments);
     }
 
     /**
@@ -138,6 +138,6 @@ abstract class BaseLogger
     {
         $log = $this->getLogger();
 
-        return $log->{$name}($arguments);
+        return call_user_func_array([$log, $name], $arguments);
     }
 }
