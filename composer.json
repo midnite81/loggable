@@ -1,0 +1,17 @@
+{
+    "name": "midnite81/loggable",
+    "description": "A laravel package to quickly create custom monolog logs",
+    "type": "library",
+    "require": {
+        "monolog/monolog": "^1.24",
+        "nesbot/carbon": "^2.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Rogers",
+            "email": "webdev@centralblue.co.uk"
+        }
+    ],
+    "minimum-stability": "stable"
+}
