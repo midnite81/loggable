@@ -96,7 +96,7 @@ abstract class BaseLogger
      */
     public function clearOldLogs()
     {
-        $files = glob($this->getDirectoryPath() . DIRECTORY_SEPARATOR . '*.' . $this->getExtension());
+        $files = glob($this->getDirectoryPath() . DIRECTORY_SEPARATOR . $this->getFilePrefix() . '-*.' . $this->getExtension());
         $allowableMaxAge = Carbon::now()->startOfDay()->subDay($this->getMaxLogDays());
 
         if ($files) {
